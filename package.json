@@ -1,6 +1,6 @@
 {
   "name": "comment-rules",
-  "version": "1.1.3",
+  "version": "1.1.4",
   "description": "Install comment policy rules for AI code editors (Cursor, Windsurf, Copilot, Codex, Cline, and 30+ more)",
   "main": "bin/cli.js",
   "bin": {
