@@ -2,7 +2,9 @@
 
 > Install comment policy rules for AI code editors and agents.
 
-A CLI tool to quickly add strict comment policy rules to your project for various AI-powered code editors and assistants.
+Ever been frustrated by code filled with more comments than actual functionality—random emojis everywhere 🚀✅❌, excessive step-by-step explanations, or distracting notes?
+
+Meet **comment-rules**: a CLI tool to enforce strict comment policies for AI code editors and assistants—eliminate clutter, remove unnecessary comments, and keep only high-quality JSDoc.
 
 ## What This Does
 
