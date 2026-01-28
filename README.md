@@ -1,3 +1,5 @@
+[!["Buy Me A Coffee"](https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png)](https://www.buymeacoffee.com/khoidh24)
+
 # comment-rules
 
 > Install comment policy rules for AI code editors and agents.
