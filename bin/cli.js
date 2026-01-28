@@ -10,45 +10,45 @@ const SCOPE = {
 };
 
 const EDITORS = {
-  antigravity: { name: "Antigravity", paths: [".agent/skills/no-inline-comment.md"], format: "md" },
+  antigravity: { name: "Antigravity", paths: [".agent/skills/jsdoc-over-inline-comments.md"], format: "md" },
   aider: { name: "Aider", paths: ["CONVENTIONS.md"], format: "md" },
   claude: { name: "Claude Code", paths: ["CLAUDE.md"], format: "md" },
   cline: { name: "Cline", paths: [".clinerules"], format: "md" },
-  codebuddy: { name: "CodeBuddy", paths: [".codebuddy/rules/no-inline-comment.md"], format: "md" },
+  codebuddy: { name: "CodeBuddy", paths: [".codebuddy/rules/jsdoc-over-inline-comments.md"], format: "md" },
   codex: { name: "Codex", paths: ["AGENTS.md"], format: "md" },
-  commandcode: { name: "Command Code", paths: [".commandcode/rules/no-inline-comment.md"], format: "md" },
-  continue: { name: "Continue", paths: [".continue/rules/no-inline-comment.md"], format: "md" },
-  crush: { name: "Crush", paths: [".crush/rules/no-inline-comment.md"], format: "md" },
-  cursor: { name: "Cursor", paths: [".cursor/rules/no-inline-comment.mdc"], format: "mdc" },
-  droid: { name: "Droid", paths: [".droid/rules/no-inline-comment.md"], format: "md" },
+  commandcode: { name: "Command Code", paths: [".commandcode/rules/jsdoc-over-inline-comments.md"], format: "md" },
+  continue: { name: "Continue", paths: [".continue/rules/jsdoc-over-inline-comments.md"], format: "md" },
+  crush: { name: "Crush", paths: [".crush/rules/jsdoc-over-inline-comments.md"], format: "md" },
+  cursor: { name: "Cursor", paths: [".cursor/rules/jsdoc-over-inline-comments.mdc"], format: "mdc" },
+  droid: { name: "Droid", paths: [".droid/rules/jsdoc-over-inline-comments.md"], format: "md" },
   gemini: { name: "Gemini CLI", paths: ["GEMINI.md"], format: "md" },
   copilot: { name: "GitHub Copilot", paths: [".github/copilot-instructions.md"], format: "md" },
-  goose: { name: "Goose", paths: [".goose/rules/no-inline-comment.md"], format: "md" },
-  junie: { name: "Junie", paths: [".junie/rules/no-inline-comment.md"], format: "md" },
-  kilocode: { name: "Kilo Code", paths: [".kilocode/rules/no-inline-comment.md"], format: "md" },
-  kiro: { name: "Kiro CLI", paths: [".kiro/rules/no-inline-comment.md"], format: "md" },
-  kode: { name: "Kode", paths: [".kode/rules/no-inline-comment.md"], format: "md" },
-  mcpjam: { name: "MCPJam", paths: [".mcpjam/rules/no-inline-comment.md"], format: "md" },
-  moltbot: { name: "Moltbot", paths: [".moltbot/rules/no-inline-comment.md"], format: "md" },
-  mux: { name: "Mux", paths: [".mux/rules/no-inline-comment.md"], format: "md" },
-  neovate: { name: "Neovate", paths: [".neovate/rules/no-inline-comment.md"], format: "md" },
-  opencode: { name: "OpenCode", paths: [".opencode/rules/no-inline-comment.md"], format: "md" },
-  openhands: { name: "OpenHands", paths: [".openhands/rules/no-inline-comment.md"], format: "md" },
-  pi: { name: "Pi", paths: [".pi/rules/no-inline-comment.md"], format: "md" },
-  pochi: { name: "Pochi", paths: [".pochi/rules/no-inline-comment.md"], format: "md" },
-  qoder: { name: "Qoder", paths: [".qoder/rules/no-inline-comment.md"], format: "md" },
-  qwencode: { name: "Qwen Code", paths: [".qwencode/rules/no-inline-comment.md"], format: "md" },
-  roocode: { name: "Roo Code", paths: [".roo/rules/no-inline-comment.md"], format: "md" },
-  trae: { name: "Trae", paths: [".trae/rules/no-inline-comment.md"], format: "md" },
+  goose: { name: "Goose", paths: [".goose/rules/jsdoc-over-inline-comments.md"], format: "md" },
+  junie: { name: "Junie", paths: [".junie/rules/jsdoc-over-inline-comments.md"], format: "md" },
+  kilocode: { name: "Kilo Code", paths: [".kilocode/rules/jsdoc-over-inline-comments.md"], format: "md" },
+  kiro: { name: "Kiro CLI", paths: [".kiro/rules/jsdoc-over-inline-comments.md"], format: "md" },
+  kode: { name: "Kode", paths: [".kode/rules/jsdoc-over-inline-comments.md"], format: "md" },
+  mcpjam: { name: "MCPJam", paths: [".mcpjam/rules/jsdoc-over-inline-comments.md"], format: "md" },
+  moltbot: { name: "Moltbot", paths: [".moltbot/rules/jsdoc-over-inline-comments.md"], format: "md" },
+  mux: { name: "Mux", paths: [".mux/rules/jsdoc-over-inline-comments.md"], format: "md" },
+  neovate: { name: "Neovate", paths: [".neovate/rules/jsdoc-over-inline-comments.md"], format: "md" },
+  opencode: { name: "OpenCode", paths: [".opencode/rules/jsdoc-over-inline-comments.md"], format: "md" },
+  openhands: { name: "OpenHands", paths: [".openhands/rules/jsdoc-over-inline-comments.md"], format: "md" },
+  pi: { name: "Pi", paths: [".pi/rules/jsdoc-over-inline-comments.md"], format: "md" },
+  pochi: { name: "Pochi", paths: [".pochi/rules/jsdoc-over-inline-comments.md"], format: "md" },
+  qoder: { name: "Qoder", paths: [".qoder/rules/jsdoc-over-inline-comments.md"], format: "md" },
+  qwencode: { name: "Qwen Code", paths: [".qwencode/rules/jsdoc-over-inline-comments.md"], format: "md" },
+  roocode: { name: "Roo Code", paths: [".roo/rules/jsdoc-over-inline-comments.md"], format: "md" },
+  trae: { name: "Trae", paths: [".trae/rules/jsdoc-over-inline-comments.md"], format: "md" },
   windsurf: { name: "Windsurf", paths: [".windsurfrules"], format: "md" },
-  zed: { name: "Zed", paths: [".zed/rules/no-inline-comment.md"], format: "md" },
-  zencoder: { name: "Zencoder", paths: [".zencoder/rules/no-inline-comment.md"], format: "md" },
+  zed: { name: "Zed", paths: [".zed/rules/jsdoc-over-inline-comments.md"], format: "md" },
+  zencoder: { name: "Zencoder", paths: [".zencoder/rules/jsdoc-over-inline-comments.md"], format: "md" },
 };
 
 const RULES = {
-  "no-inline-comment": {
-    name: "No Inline Comment (always apply)",
-    filename: "no-inline-comment",
+  "jsdoc-over-inline-comments": {
+    name: "JSDoc Over Inline Comments (always apply)",
+    filename: "jsdoc-over-inline-comments",
     mdcFrontmatter: `---
 description: No inline comments. Use JSDoc. Only comment for truly complex logic.
 globs:
@@ -147,9 +147,9 @@ await saveUser(user);
 \`\`\`
 `,
   },
-  "manual-clear-comment": {
-    name: "Manual Clear Comment (on-demand skill)",
-    filename: "manual-clear-comment",
+  "manual-cleanup-comments": {
+    name: "Manual Cleanup Comments (on-demand skill)",
+    filename: "manual-cleanup-comments",
     mdcFrontmatter: `---
 description: "(MANUAL) Clean comments: remove inline comments, replace with JSDoc, keep only complex-logic comments, no emoji."
 globs:
@@ -258,8 +258,8 @@ Example:
 };
 
 const RULE_CHOICES = {
-  NO_INLINE: "no-inline-comment",
-  MANUAL_CLEAR: "manual-clear-comment",
+  JSDOC: "jsdoc-over-inline-comments",
+  MANUAL: "manual-cleanup-comments",
   ALL: "all",
 };
 
@@ -296,8 +296,8 @@ function getFilePath(editorKey, ruleKey) {
   const basePath = editor.paths[0];
   const ext = editor.format === "mdc" ? ".mdc" : ".md";
   
-  if (basePath.includes("no-inline-comment")) {
-    return basePath.replace("no-inline-comment", RULES[ruleKey].filename);
+  if (basePath.includes("jsdoc-over-inline-comments")) {
+    return basePath.replace("jsdoc-over-inline-comments", RULES[ruleKey].filename);
   }
   
   const dir = path.dirname(basePath);
@@ -315,7 +315,7 @@ function getFilePath(editorKey, ruleKey) {
   return path.join(dir, filename);
 }
 
-function installForEditor(editorKey, scope = SCOPE.PROJECT, selectedRules = [RULE_CHOICES.NO_INLINE]) {
+function installForEditor(editorKey, scope = SCOPE.PROJECT, selectedRules = [RULE_CHOICES.JSDOC]) {
   const editor = EDITORS[editorKey];
   if (!editor) return [];
 
@@ -323,7 +323,7 @@ function installForEditor(editorKey, scope = SCOPE.PROJECT, selectedRules = [RUL
   const installedFiles = [];
   
   const rulesToInstall = selectedRules.includes(RULE_CHOICES.ALL) 
-    ? [RULE_CHOICES.NO_INLINE, RULE_CHOICES.MANUAL_CLEAR]
+    ? [RULE_CHOICES.JSDOC, RULE_CHOICES.MANUAL]
     : selectedRules;
 
   for (const ruleKey of rulesToInstall) {
@@ -611,38 +611,38 @@ function listEditors() {
 
 function showHelp() {
   console.log(`
-no-inline-comment - Install "no inline comment" rules for AI code editors
+comment-rules - Install comment policy rules for AI code editors
 
 Usage:
-  npx no-inline-comment                       Interactive mode
-  npx no-inline-comment [editors...]          Install for specific editor(s)
-  npx no-inline-comment [editors...] -g       Install globally
-  npx no-inline-comment --all                 Install for all editors
-  npx no-inline-comment --list                List all supported editors
+  npx comment-rules                       Interactive mode
+  npx comment-rules [editors...]          Install for specific editor(s)
+  npx comment-rules [editors...] -g       Install globally
+  npx comment-rules --all                 Install for all editors
+  npx comment-rules --list                List all supported editors
 
 Options:
   -g, --global         Install to home directory
   -a, --all            Install for all supported editors
   -l, --list           List all supported editors
   -h, --help           Show this help
-  --rule <name>        Select rule (default: no-inline)
+  --rule <name>        Select rule (default: jsdoc)
 
 Rules:
-  no-inline            Prevent inline comments (always apply)
-  manual-clear         Clean up comments skill (on-demand)
+  jsdoc                jsdoc-over-inline-comments (always apply)
+  manual               manual-cleanup-comments (on-demand)
   all                  Both rules
 
 Examples:
-  npx no-inline-comment cursor
-  npx no-inline-comment cursor --rule manual-clear
-  npx no-inline-comment cursor --rule all
-  npx no-inline-comment --all --rule all
+  npx comment-rules cursor
+  npx comment-rules cursor --rule manual
+  npx comment-rules cursor --rule all
+  npx comment-rules --all --rule all
 `);
 }
 
 async function interactiveMode() {
   const scopeMenu = new Menu(
-    "=== No Inline Comment Rule Installer ===",
+    "=== Comment Rules Installer ===",
     [
       { key: SCOPE.PROJECT, label: "Project - Install to current directory (.)" },
       { key: SCOPE.GLOBAL, label: "Global  - Install to home directory (~)" },
@@ -655,8 +655,8 @@ async function interactiveMode() {
     `=== Select Rules [${getScopeLabel(scope)}] ===`,
     [
       { key: RULE_CHOICES.ALL, label: "All rules (both above)" },
-      { key: RULE_CHOICES.NO_INLINE, label: "no-inline-comment (always apply - prevent inline comments)" },
-      { key: RULE_CHOICES.MANUAL_CLEAR, label: "manual-clear-comment (on-demand skill - clean up comments)" },
+      { key: RULE_CHOICES.JSDOC, label: "jsdoc-over-inline-comments (always apply - prefer JSDoc)" },
+      { key: RULE_CHOICES.MANUAL, label: "manual-cleanup-comments (on-demand skill - clean up comments)" },
     ],
     false
   );
@@ -675,7 +675,7 @@ async function interactiveMode() {
   const selectedEditors = await editorMenu.run();
 
   const rulesToInstall = selectedRule === RULE_CHOICES.ALL 
-    ? [RULE_CHOICES.NO_INLINE, RULE_CHOICES.MANUAL_CLEAR]
+    ? [RULE_CHOICES.JSDOC, RULE_CHOICES.MANUAL]
     : [selectedRule];
 
   const ruleNames = rulesToInstall.map(r => RULES[r].filename).join(", ");
@@ -686,12 +686,12 @@ async function interactiveMode() {
     console.log(`    [ok] ${EDITORS[editorKey].name}`);
   }
 
-  console.log(`\n[*] Install complete! (${getScopeLabel(scope)})\n`);
+  console.log(`\n[*] Install complete!\n`);
 }
 
-function installAll(scope = SCOPE.PROJECT, selectedRules = [RULE_CHOICES.NO_INLINE]) {
+function installAll(scope = SCOPE.PROJECT, selectedRules = [RULE_CHOICES.JSDOC]) {
   const rulesToInstall = selectedRules.includes(RULE_CHOICES.ALL) 
-    ? [RULE_CHOICES.NO_INLINE, RULE_CHOICES.MANUAL_CLEAR]
+    ? [RULE_CHOICES.JSDOC, RULE_CHOICES.MANUAL]
     : selectedRules;
   
   const ruleNames = rulesToInstall.map(r => RULES[r].filename).join(", ");
@@ -710,7 +710,7 @@ function parseArgs(args) {
     editors: [], 
     scope: SCOPE.PROJECT, 
     action: null,
-    rules: [RULE_CHOICES.NO_INLINE]
+    rules: [RULE_CHOICES.JSDOC]
   };
 
   for (let i = 0; i < args.length; i++) {
@@ -727,11 +727,11 @@ function parseArgs(args) {
       result.action = "all";
     } else if (lower === "--rule" || lower === "-r") {
       const nextArg = args[i + 1]?.toLowerCase();
-      if (nextArg === "no-inline" || nextArg === "no-inline-comment") {
-        result.rules = [RULE_CHOICES.NO_INLINE];
+      if (nextArg === "jsdoc" || nextArg === "jsdoc-over-inline-comments") {
+        result.rules = [RULE_CHOICES.JSDOC];
         i++;
-      } else if (nextArg === "manual-clear" || nextArg === "manual-clear-comment") {
-        result.rules = [RULE_CHOICES.MANUAL_CLEAR];
+      } else if (nextArg === "manual" || nextArg === "manual-cleanup-comments") {
+        result.rules = [RULE_CHOICES.MANUAL];
         i++;
       } else if (nextArg === "all") {
         result.rules = [RULE_CHOICES.ALL];
@@ -789,7 +789,7 @@ async function main() {
   }
 
   const rulesToInstall = rules.includes(RULE_CHOICES.ALL) 
-    ? [RULE_CHOICES.NO_INLINE, RULE_CHOICES.MANUAL_CLEAR]
+    ? [RULE_CHOICES.JSDOC, RULE_CHOICES.MANUAL]
     : rules;
   const ruleNames = rulesToInstall.map(r => RULES[r].filename).join(", ");
   

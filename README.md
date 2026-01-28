@@ -1,30 +1,28 @@
-# no-inline-comment
+# comment-rules
 
-> Install "no inline comment" coding rules for AI code editors and agents.
+> Install comment policy rules for AI code editors and agents.
 
 A CLI tool to quickly add strict comment policy rules to your project for various AI-powered code editors and assistants.
 
 ## What This Does
 
-This package enforces a clean comment policy:
+This package provides two rules:
 
-- **No inline/line-by-line comments** (e.g., `// do X`, `// set y`)
-- **Use JSDoc** for documentation of functions, classes, and methods
-- **No emojis** in comments or JSDoc
-- **Comments only for truly complex logic** (rare cases)
+1. **jsdoc-over-inline-comments** (always apply) - Prefer JSDoc over inline comments
+2. **manual-cleanup-comments** (on-demand) - Clean up existing comments
 
 ## Installation
 
 Run directly with npx (no install required):
 
 ```bash
-npx no-inline-comment
+npx comment-rules
 ```
 
 Or install globally:
 
 ```bash
-npm install -g no-inline-comment
+npm install -g comment-rules
 ```
 
 ## Usage
@@ -32,7 +30,7 @@ npm install -g no-inline-comment
 ### Interactive Mode (Arrow Key Navigation)
 
 ```bash
-npx no-inline-comment
+npx comment-rules
 ```
 
 Features:
@@ -46,18 +44,28 @@ Features:
 
 ```bash
 # Cursor (installs to current directory)
-npx no-inline-comment cursor
+npx comment-rules cursor
 
 # GitHub Copilot
-npx no-inline-comment copilot
+npx comment-rules copilot
 
 # Windsurf
-npx no-inline-comment windsurf
+npx comment-rules windsurf
 
 # Claude Code
-npx no-inline-comment claude
+npx comment-rules claude
 
 # And 30+ more editors...
+```
+
+### Select Specific Rule
+
+```bash
+# Install only manual-cleanup-comments rule
+npx comment-rules cursor --rule manual
+
+# Install both rules
+npx comment-rules cursor --rule all
 ```
 
 ### Install Globally (Home Directory)
@@ -66,74 +74,75 @@ Use `--global` or `-g` flag to install rules to your home directory:
 
 ```bash
 # Cursor (installs to ~/)
-npx no-inline-comment cursor --global
+npx comment-rules cursor --global
 
 # All editors globally
-npx no-inline-comment --all -g
+npx comment-rules --all -g
 ```
 
 ### Install for All Editors
 
 ```bash
 # Project scope (current directory)
-npx no-inline-comment --all
+npx comment-rules --all
 
 # Global scope (home directory)
-npx no-inline-comment --all --global
+npx comment-rules --all --global
 ```
 
 ### List Supported Editors
 
 ```bash
-npx no-inline-comment --list
+npx comment-rules --list
 ```
 
 ### Options
 
-| Option         | Description                                            |
-| -------------- | ------------------------------------------------------ |
-| `-g, --global` | Install to home directory instead of current directory |
-| `-a, --all`    | Install for all supported editors                      |
-| `-l, --list`   | List all supported editors                             |
-| `-h, --help`   | Show help message                                      |
+| Option          | Description                                            |
+| --------------- | ------------------------------------------------------ |
+| `-g, --global`  | Install to home directory instead of current directory |
+| `-a, --all`     | Install for all supported editors                      |
+| `-l, --list`    | List all supported editors                             |
+| `-h, --help`    | Show help message                                      |
+| `--rule <name>` | Select rule: `jsdoc`, `manual`, or `all`               |
 
 ## Supported Editors/Agents (30+)
 
-| Editor         | Config File                               |
-| -------------- | ----------------------------------------- |
-| Aider          | `CONVENTIONS.md`                          |
-| Antigravity    | `.agent/skills/no-inline-comment.md`      |
-| Claude Code    | `CLAUDE.md`                               |
-| Cline          | `.clinerules`                             |
-| CodeBuddy      | `.codebuddy/rules/no-inline-comment.md`   |
-| Codex          | `AGENTS.md`                               |
-| Command Code   | `.commandcode/rules/no-inline-comment.md` |
-| Continue       | `.continue/rules/no-inline-comment.md`    |
-| Crush          | `.crush/rules/no-inline-comment.md`       |
-| Cursor         | `.cursor/rules/no-inline-comment.mdc`     |
-| Droid          | `.droid/rules/no-inline-comment.md`       |
-| Gemini CLI     | `GEMINI.md`                               |
-| GitHub Copilot | `.github/copilot-instructions.md`         |
-| Goose          | `.goose/rules/no-inline-comment.md`       |
-| Junie          | `.junie/rules/no-inline-comment.md`       |
-| Kilo Code      | `.kilocode/rules/no-inline-comment.md`    |
-| Kiro CLI       | `.kiro/rules/no-inline-comment.md`        |
-| Kode           | `.kode/rules/no-inline-comment.md`        |
-| MCPJam         | `.mcpjam/rules/no-inline-comment.md`      |
-| Moltbot        | `.moltbot/rules/no-inline-comment.md`     |
-| Mux            | `.mux/rules/no-inline-comment.md`         |
-| Neovate        | `.neovate/rules/no-inline-comment.md`     |
-| OpenCode       | `.opencode/rules/no-inline-comment.md`    |
-| OpenHands      | `.openhands/rules/no-inline-comment.md`   |
-| Pi             | `.pi/rules/no-inline-comment.md`          |
-| Pochi          | `.pochi/rules/no-inline-comment.md`       |
-| Qoder          | `.qoder/rules/no-inline-comment.md`       |
-| Qwen Code      | `.qwencode/rules/no-inline-comment.md`    |
-| Roo Code       | `.roo/rules/no-inline-comment.md`         |
-| Trae           | `.trae/rules/no-inline-comment.md`        |
-| Windsurf       | `.windsurfrules`                          |
-| Zed            | `.zed/rules/no-inline-comment.md`         |
-| Zencoder       | `.zencoder/rules/no-inline-comment.md`    |
+| Editor         | Config File                                        |
+| -------------- | -------------------------------------------------- |
+| Aider          | `CONVENTIONS.md`                                   |
+| Antigravity    | `.agent/skills/jsdoc-over-inline-comments.md`      |
+| Claude Code    | `CLAUDE.md`                                        |
+| Cline          | `.clinerules`                                      |
+| CodeBuddy      | `.codebuddy/rules/jsdoc-over-inline-comments.md`   |
+| Codex          | `AGENTS.md`                                        |
+| Command Code   | `.commandcode/rules/jsdoc-over-inline-comments.md` |
+| Continue       | `.continue/rules/jsdoc-over-inline-comments.md`    |
+| Crush          | `.crush/rules/jsdoc-over-inline-comments.md`       |
+| Cursor         | `.cursor/rules/jsdoc-over-inline-comments.mdc`     |
+| Droid          | `.droid/rules/jsdoc-over-inline-comments.md`       |
+| Gemini CLI     | `GEMINI.md`                                        |
+| GitHub Copilot | `.github/copilot-instructions.md`                  |
+| Goose          | `.goose/rules/jsdoc-over-inline-comments.md`       |
+| Junie          | `.junie/rules/jsdoc-over-inline-comments.md`       |
+| Kilo Code      | `.kilocode/rules/jsdoc-over-inline-comments.md`    |
+| Kiro CLI       | `.kiro/rules/jsdoc-over-inline-comments.md`        |
+| Kode           | `.kode/rules/jsdoc-over-inline-comments.md`        |
+| MCPJam         | `.mcpjam/rules/jsdoc-over-inline-comments.md`      |
+| Moltbot        | `.moltbot/rules/jsdoc-over-inline-comments.md`     |
+| Mux            | `.mux/rules/jsdoc-over-inline-comments.md`         |
+| Neovate        | `.neovate/rules/jsdoc-over-inline-comments.md`     |
+| OpenCode       | `.opencode/rules/jsdoc-over-inline-comments.md`    |
+| OpenHands      | `.openhands/rules/jsdoc-over-inline-comments.md`   |
+| Pi             | `.pi/rules/jsdoc-over-inline-comments.md`          |
+| Pochi          | `.pochi/rules/jsdoc-over-inline-comments.md`       |
+| Qoder          | `.qoder/rules/jsdoc-over-inline-comments.md`       |
+| Qwen Code      | `.qwencode/rules/jsdoc-over-inline-comments.md`    |
+| Roo Code       | `.roo/rules/jsdoc-over-inline-comments.md`         |
+| Trae           | `.trae/rules/jsdoc-over-inline-comments.md`        |
+| Windsurf       | `.windsurfrules`                                   |
+| Zed            | `.zed/rules/jsdoc-over-inline-comments.md`         |
+| Zencoder       | `.zencoder/rules/jsdoc-over-inline-comments.md`    |
 
 ## The Rule
 
