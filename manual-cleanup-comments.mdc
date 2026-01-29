@@ -66,20 +66,38 @@ When a comment describes behavior of a function/class/module, convert into JSDoc
 
 For any exported function/class, public method, or non-trivial helper you touch:
 
-- 1 sentence purpose
+- Description MUST detail HOW the function executes its logic, not just WHAT it does:
+  - Describe the algorithm/steps taken inside the function
+  - Mention key transformations, validations, or side effects
+  - Explain control flow if non-trivial (loops, conditionals, early returns)
 - @param for each param
 - @returns (or void)
 - Include constraints/edge cases if important
 - NO emoji
 
-Example:
-/\*\*
+Good example (detailed logic):
 
-- Parses a user-provided date string using a fixed timezone.
-- @param input - Date string from UI.
-- @param tz - IANA timezone used for interpretation.
-- @returns A Date instance, or null if invalid.
-  \*/
+```ts
+/**
+ * Splits input by 'T' or space to extract date portion, then parses using
+ * Intl.DateTimeFormat with the given timezone. Falls back to native Date
+ * parsing if Intl fails. Returns null for any parse error or NaN result.
+ * @param input - Date string from UI (ISO or locale format).
+ * @param tz - IANA timezone used for interpretation.
+ * @returns A Date instance, or null if parsing fails.
+ */
+```
+
+Bad example (too generic):
+
+```ts
+/**
+ * Parses a date string.
+ * @param input - Date string.
+ * @param tz - Timezone.
+ * @returns A Date or null.
+ */
+```
 
 ## Procedure (do this every time skill is invoked)
 

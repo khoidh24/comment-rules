@@ -32,8 +32,12 @@ alwaysApply: true
 
 ## JSDoc requirements
 
-- Must include: purpose (1 sentence), @param, @returns (or void), and important constraints.
-- Include examples only when behavior is subtle.
+- Description MUST detail HOW the function executes its logic, not just WHAT it does:
+  - Describe the algorithm/steps taken inside the function
+  - Mention key transformations, validations, or side effects
+  - Explain control flow if non-trivial (loops, conditionals, early returns)
+- Must include: @param, @returns (or void), and important constraints.
+- Include @example only when behavior is subtle or has edge cases.
 
 ## When comments are allowed (rare)
 
@@ -59,14 +63,33 @@ Allowed comment format (focus on WHY, no emoji):
 
 ## Examples
 
-### Good (JSDoc, no emoji)
+### Good (JSDoc with detailed logic, no emoji)
 
 ```ts
 /**
- * Normalizes a user-provided phone number into E.164-like format.
+ * Strips all non-digit characters from input, then prepends the country
+ * calling code from defaultCountry if the input lacks a '+' prefix.
+ * Validates the result length is between 10-15 digits before returning.
  * @param input - Raw phone number string from UI.
  * @param defaultCountry - ISO country code used when input has no prefix.
- * @returns Normalized string or null if invalid.
+ * @returns E.164-formatted string, or null if digit count is invalid.
+ */
+export function normalizePhone(
+  input: string,
+  defaultCountry: string
+): string | null {
+  // implementation...
+}
+```
+
+### Bad (generic description without logic detail)
+
+```ts
+/**
+ * Normalizes a phone number.
+ * @param input - Phone number.
+ * @param defaultCountry - Country code.
+ * @returns Normalized phone or null.
  */
 export function normalizePhone(
   input: string,
