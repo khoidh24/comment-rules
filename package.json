@@ -1,12 +1,15 @@
 {
   "name": "comment-rules",
-  "version": "1.1.7",
+  "version": "1.1.8",
   "description": "Install comment policy rules for AI code editors (Cursor, Windsurf, Copilot, Codex, Cline, and 30+ more)",
   "stacks": [
     "jsdoc-over-inline-comments.mdc",
     "manual-cleanup-comments.mdc"
   ],
   "changelog": {
+    "1.1.8": [
+      "fix: correct Antigravity config path from .agent/rules/ to .antigravity/rules/"
+    ],
     "1.1.7": [
       "fix: correct Antigravity config path from .agent/skills/ to .agent/rules/"
     ],
